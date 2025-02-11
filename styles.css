@@ -1,0 +1,133 @@
+/* Estilo Neon Cyberpunk com Efeito LED */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #00ffe1;
+    scroll-behavior: smooth;
+    padding: 16px;
+    text-shadow: 0 0 2px #00ffe1, 0 0 5px #00f8e1, 0 0 8px #00f2e1;
+  }
+  
+  header {
+    text-align: center;
+    padding: 40px 0;
+  }
+  
+  h1 {
+    font-size: 4rem;
+    color: #ff00ff;
+    animation: fadeInScale 1.5s ease-out;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: repeating-linear-gradient(90deg, #ff00ff 0px, #ff33ff 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 15px #ff00ff, 0 0 30px #ff33ff;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    margin-top: 32px;
+    text-align: center;
+    color: #00ffe1;
+    animation: slideIn 1.2s ease-out;
+    text-shadow: 0 0 3px #00ffe1, 0 0 7px #00d8e1;
+    letter-spacing: 2px;
+    background: repeating-linear-gradient(90deg, #00ffe1 0px, #00f2e1 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  section {
+    padding: 32px 16px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    color: #00ffe1;
+    text-shadow: 0 0 2px #00ffe1, 0 0 4px #00c8d1;
+    background: repeating-linear-gradient(90deg, #00c8d1 0px, #00ffe1 2px, transparent 4px);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .project-card {
+    background-color: rgba(50, 60, 89, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 255, 225, 0.15);
+    animation: fadeIn 0.8s ease-out;
+    transition: transform 0.25s, box-shadow 0.25s;
+    border: 1px solid #00ffe1;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 12px rgba(0, 255, 225, 0.25);
+  }
+  
+  button {
+    background-color: #ff00ff;
+    color: #0f0c29;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.25s, box-shadow 0.25s;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(255, 0, 255, 0.4);
+    text-shadow: 0 0 3px #ff33ff;
+  }
+  
+  button:hover {
+    background-color: #ff33ff;
+    box-shadow: 0 4px 8px rgba(255, 0, 255, 0.5);
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(25px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio Simples - Ivan Nascimento</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Ivan Nascimento</h1>
+    <h2 id="typing"></h2>
+  </header>
+
+  <section>
+    <h2>Meus Projetos</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Jogo do Número Secreto</h3>
+        <p>Adivinhe o número certo com dicas interativas!</p>
+        <button onclick="window.open('https://franasc07.github.io/Jogo-do-Numero-Secret/', '_blank')">Ver Projeto</button>
+      </div>
+      <div class="project-card">
+        <h3>Jogo Amigo Secreto</h3>
+        <p>Sorteio de amigo secreto sem papelzinho!</p>
+        <button onclick="window.open('https://franasc07.github.io/Jogo-Amigo-Secreto/', '_blank')">Ver Projeto</button>
+      </div>
+      <div class="project-card">
+        <h3>Loja de Roupas Online</h3>
+        <p>Moda acessível com um clique!</p>
+        <button onclick="window.open('https://franasc07.github.io/Loja_de_Roupas/', '_blank')">Ver Projeto</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // Efeito de digitação com cursor
+    const text = "Desenvolvedor Web em constante evolução!";
+    let index = 0;
+    const cursor = "|";
+
+    function typeEffect() {
+      if (index < text.length) {
+        document.getElementById("typing").textContent = text.substring(0, index + 1) + cursor;
+        index++;
+        setTimeout(typeEffect, 100);
+      } else {
+        document.getElementById("typing").textContent = text;
+      }
+    }
+
+    typeEffect();
+  </script>
+</body>
+</html>
